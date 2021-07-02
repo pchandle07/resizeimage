@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Resizer</title>
+</head>
+
+<body>
+
+    <div class="inputs">
+        <h2>Resize your Image</h2>
+        <form>
+            <label for="file" class="upload" onclick="TestsFunction()">Upload an Image</label>
+            <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+
+            <div id="TestsDiv" style="display:none">
+                <label>Width</label>
+                <input type="number" id="imWidth" placeholder="Enter width in px">
+
+                <label>Height</label>
+                <input type="number" id="imHeight" placeholder="Enter height in px">
+            </div>
+        </form>
+
+        <button type="submit" id="preview" onclick="dis()">Preview</button>
+    </div>
+
+    <div class="wrapper">
+        <canvas id="result">
+      <img src="" id="imgDisplayed" alt="">
+    </canvas>
+        <p> <button id="down" style="display: none;">Download</button>
+        </p>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
